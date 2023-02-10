@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 12:41:22 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/10 17:55:35 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/10 18:35:57 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ std::ostream & operator<<(std::ostream & o, Brain const &ref)
 {
     std::string *ids = ref.getIdeas();
     for (size_t i = 0; i < NUM; i++)
-        std::cout << i + 1 << " : "<< ids[i] << "  ";
+        std::cout << ids[i] << "  ";
     std::cout << std::endl;
     return o;
 }
