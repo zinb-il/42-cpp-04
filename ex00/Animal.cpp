@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 17:59:24 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/09 18:26:17 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/10 11:50:44 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 /*                     Constructors  and Destructor                 */
 /********************************************************************/
 
-Animal::Animal():type("none")
+Animal::Animal():type("Animal")
 {
     std::cout << "Animal Default constructor called" << std::endl;
 }
@@ -66,7 +66,7 @@ Animal & Animal::operator=(Animal const &ob)
 
 void    Animal::makeSound() const
 {
-     std::cout << "Animal makes asound" << std::endl;
+     std::cout << "Animal makes a sound" << std::endl;
 }
 
 /********************************************************************/

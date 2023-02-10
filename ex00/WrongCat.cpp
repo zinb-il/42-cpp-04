@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 18:30:42 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/10 11:50:50 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/10 11:50:37 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,27 +19,27 @@
 /*                     Constructors  and Destructor                 */
 /********************************************************************/
 
-Dog::Dog():Animal()
+WrongCat::WrongCat():WrongAnimal()
 {
-    this->type = "Dog";
-    std::cout << "Dog Default constructor called" << std::endl;
+    this->type = "WrongCat";
+    std::cout << "WrongCat Default constructor called" << std::endl;
 }
 
-Dog::Dog(std::string t):Animal(t)
+WrongCat::WrongCat(std::string t):WrongAnimal(t)
 {
     this->type = t;
-    std::cout << "Dog Parameter constroctur called" << std::endl;
+    std::cout << "WrongCat Parameter constroctur called" << std::endl;
 }
 
-Dog::Dog(Dog const &ob)
+WrongCat::WrongCat(WrongCat const &ob)
 {
-    std::cout << "Dog Copy constroctur called" << std::endl;
+    std::cout << "WrongCat Copy constroctur called" << std::endl;
     *this = ob;
 }
 
-Dog::~Dog()
+WrongCat::~WrongCat()
 {
-    std::cout << "Dog Destructor called " << std::endl;
+    std::cout << "WrongCat Destructor called " << std::endl;
 }
 /********************************************************************/
 
@@ -51,9 +51,9 @@ Dog::~Dog()
 /*                    Assignment Operator Overload                  */
 /********************************************************************/
 
-Dog & Dog::operator=(Dog const &ob)
+WrongCat & WrongCat::operator=(WrongCat const &ob)
 {
-    std::cout << "Dog Copy assignment operator called" << std::endl;
+    std::cout << "WrongCat Copy assignment operator called" << std::endl;
     this->type = ob.getType();
     return (*this);
 }
@@ -68,9 +68,9 @@ Dog & Dog::operator=(Dog const &ob)
 /********************************************************************/
 
 
-void    Dog::makeSound() const
+void    WrongCat::makeSound() const
 {
-     std::cout << "The Dog barks" << std::endl;
+     std::cout << "The WrongCat meows" << std::endl;
 }
 
 /********************************************************************/
