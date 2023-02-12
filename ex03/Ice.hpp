@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 13:55:42 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/12 13:56:01 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/12 22:03:40 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ class Ice : public AMateria
         Ice(Ice const &ob);
         
         Ice & operator=(Ice const &ob);
-        std::string const & getType() const;
         virtual AMateria* clone() const;
+        virtual void use(ICharacter& target);
 };
 
 #endif

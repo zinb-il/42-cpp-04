@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 13:56:18 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/12 14:10:21 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/12 21:56:21 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,11 @@ AMateria* Cure::clone() const
 {
     AMateria *cure = new Cure(this->_type);
     return(cure);
+}
+
+void AMateria::use(ICharacter& target)
+{
+    std::cout << "* heals " << target.getName() << "s wounds *" << std::endl;
 }
 
 /********************************************************************/

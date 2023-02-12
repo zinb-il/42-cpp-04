@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 14:00:40 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/12 14:06:31 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/12 22:45:00 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 /*                     Constructors  and Destructor                 */
 /********************************************************************/
 
-Character::Character():
+Character::Character()
 {
     std::cout << "Character Default constructor called" << std::endl;
 }
@@ -33,9 +33,12 @@ Character::~Character()
 {
     std::cout << "Character Destructor called " << std::endl;
 }
+
+Character::Character(std::string name):_name(name)
+{
+    std::cout << "Character Destructor called " << std::endl;
+}
 /********************************************************************/
-
-
 
 
 
@@ -46,6 +49,7 @@ Character::~Character()
 Character & Character::operator=(Character const &ob)
 {
     std::cout << "Character Copy assignment operator called" << std::endl;
+    this->_name = ob.getName();
     return (*this);
 }
 
@@ -55,8 +59,13 @@ Character & Character::operator=(Character const &ob)
 
 
 /********************************************************************/
-/*                          Public functions                        */
+/*                  Getters and Setters functions                   */
 /********************************************************************/
 
+
+std::string const & Character::getName()
+{
+    return (this->_name);
+}
 
 /********************************************************************/

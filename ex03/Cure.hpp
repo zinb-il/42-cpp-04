@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 13:45:24 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/12 13:55:36 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/12 22:03:25 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ class Cure : public AMateria
         Cure(Cure const &ob);
         
         Cure & operator=(Cure const &ob);
-        std::string const & getType() const;
         virtual AMateria* clone() const;
+        virtual void use(ICharacter& target);
 };
 
 #endif

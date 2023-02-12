@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 11:07:53 by marvin            #+#    #+#             */
-/*   Updated: 2023/02/12 13:29:43 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/12 23:07:22 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+
+#define NUM 4
+#define ICE "ice"
+#define CURE "cure"
 
 #include "ICharacter.hpp"
 #include "Character.hpp"
@@ -28,6 +32,7 @@
 #define GRN "\033[0;32m"
 #define WHT "\033[0;0m"
 #define RED "\033[0;31m"
+
 
 
 #endif
