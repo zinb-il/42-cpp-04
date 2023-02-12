@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 18:30:42 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/10 11:50:37 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/12 13:18:48 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Cat::Cat(std::string t):Animal(t)
     std::cout << "Cat Parameter constroctur called" << std::endl;
 }
 
-Cat::Cat(Cat const &ob)
+Cat::Cat(Cat const &ob):Animal(ob)
 {
     std::cout << "Cat Copy constroctur called" << std::endl;
     *this = ob;

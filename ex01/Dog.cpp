@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 18:30:42 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/10 17:27:34 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/12 13:18:12 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Dog::Dog(std::string t):Animal(t)
     std::cout << "Dog Parameter constroctur called" << std::endl;
 }
 
-Dog::Dog(Dog const &ob)
+Dog::Dog(Dog const &ob):Animal(ob)
 {
     std::cout << "Dog Copy constroctur called" << std::endl;
     *this = ob;
