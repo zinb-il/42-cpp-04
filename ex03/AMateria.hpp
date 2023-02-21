@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 13:34:14 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/12 21:49:20 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/21 19:47:13 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define AMATERIA_HPP
 
 #include "header.h"
+#include "ICharacter.hpp"
 
 class AMateria
 {

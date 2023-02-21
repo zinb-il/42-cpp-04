@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 11:07:53 by marvin            #+#    #+#             */
-/*   Updated: 2023/02/12 23:07:22 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/21 19:47:58 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@
 #define ICE "ice"
 #define CURE "cure"
 
-#include "ICharacter.hpp"
-#include "Character.hpp"
 #include "AMateria.hpp"
+#include "ICharacter.hpp"
 #include "IMateriaSource.hpp"
-#include "MateriaSource.hpp"
 #include "Cure.hpp"
 #include "Ice.hpp"
+#include "Character.hpp"
+#include "MateriaSource.hpp"
 
 #define GRN "\033[0;32m"
 #define WHT "\033[0;0m"

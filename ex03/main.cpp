@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 18:12:42 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/12 22:16:20 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/21 19:41:06 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int main(void)
 {
-
+    IMateriaSource* src = new MateriaSource();
+    delete src;
     return (0);
 }
