@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 18:12:42 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/22 16:20:52 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/22 17:13:59 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ void test_normal(void) {
   delete src;
 }
 
-void test_other(void) {
+void mon_test(void) {
+    
   IMateriaSource* src = new MateriaSource();
   src->learnMateria(new Ice());
   src->learnMateria(new Ice());
@@ -57,8 +58,14 @@ void test_other(void) {
   AMateria* tmp1 = src->createMateria("ice");
   me->equip(tmp1);
   AMateria* tmp2 = src->createMateria("cure");
-  me->equip(tmp);
+  me->equip(tmp2);
 
+  std::cout << RED << "Use 3 and 2" << WHT << std::endl;
+  me->use(2, *me);
+  me->use(3, *me);
+  std::cout << RED << "End of Use 3 and 2" << WHT << std::endl;
+
+  std::cout << RED << "Unequip 3 and 2" << WHT << std::endl;
   me->unequip(2);
   me->unequip(3);
 
@@ -77,11 +84,10 @@ void test_other(void) {
 }
 
 int main(void) {
-    std::cout << std::setfill('=') << std::setw(100) << "\n" << std::setfill(' ');
+    std::cout << RED << std::setfill('*') << std::setw(150) << WHT << std::endl;
     test_normal();
-    std::cout << std::setfill('=') << std::setw(100) << "\n" << std::setfill(' ');
-    test_other();
-    std::cout << std::setfill('=') << std::setw(100) << "\n" << std::setfill(' ');
+    std::cout << RED << std::setfill('*') << std::setw(150) << WHT << std::endl;
+    mon_test();
     system("leaks animal");
     return 0;
 }

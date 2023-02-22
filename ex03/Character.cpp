@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 14:00:40 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/22 16:00:49 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/22 16:59:46 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,8 +122,10 @@ void Character::unequip(int idx)
 }
 void Character::use(int idx, ICharacter& target)
 {
-    if (idx >= 0 && idx < NUM)
+    if (idx >= 0 && idx < NUM && _amteria[idx])
         _amteria[idx]->use(target);
+    else
+        std::cout << RED << "this cacarter doesn't exist" << WHT << std::endl;
 }
 
 /********************************************************************/

@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 22:18:48 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/22 16:19:24 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/22 17:13:34 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,6 +103,7 @@ void MateriaSource::learnMateria(AMateria* am)
             return ;
         }
     }
+    delete(am);
     std::cout << RED << "The list of AMateria is complete" << WHT <<std::endl;
     
 }
