@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 22:18:48 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/12 23:13:43 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/22 16:19:24 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@
 MateriaSource::MateriaSource()
 {
     std::cout << "MateriaSource Default constructor called" << std::endl;
+    for (size_t i = 0; i < NUM; i++)
+        _amteria[i] = 0;
 }
 
 
@@ -33,6 +35,11 @@ MateriaSource::MateriaSource(MateriaSource const &ob)
 MateriaSource::~MateriaSource()
 {
     std::cout << "MateriaSource Destructor called " << std::endl;
+    for (size_t i = 0; i < NUM; i++)
+    {
+        if (_amteria[i])
+            delete(_amteria[i]);
+    }
 }
 
 /********************************************************************/
@@ -46,21 +53,16 @@ MateriaSource::~MateriaSource()
 MateriaSource & MateriaSource::operator=(MateriaSource const &ob)
 {
     std::cout << "MateriaSource Copy assignment operator called" << std::endl;
-    if (_amteria)
+    for (size_t i = 0; i < NUM; i++)
     {
-        for (size_t i = 0; i < NUM; i++)
-        {
-            if (_amteria[i])
-                delete(_amteria[i]);
-        }
-        
+        if (_amteria[i])
+            delete(_amteria[i]);
     }
     for (size_t i = 0; i < NUM; i++)
     {
-        if ((ob.getAMateria(i))->getType() == ICE)
-            _amteria[i] = new Ice(ob.getAMateria(i)->getType());
-        if ((ob.getAMateria(i))->getType() == CURE)
-            _amteria[i] = new Cure(ob.getAMateria(i)->getType());
+        _amteria[i] = 0;
+        if (ob.getAMateria(i))
+            _amteria[i] = ob.getAMateria(i)->clone();
     }
     return (*this);
 }
@@ -75,7 +77,48 @@ MateriaSource & MateriaSource::operator=(MateriaSource const &ob)
 
 AMateria * MateriaSource::getAMateria(int in) const
 {
-    return this->_amteria[in];
+    if (in >= 0 && in < NUM)
+        return this->_amteria[in];
+    return 0;
+}
+
+/********************************************************************/
+
+
+
+/********************************************************************/
+/*                          Public functions                        */
+/********************************************************************/
+
+void MateriaSource::learnMateria(AMateria* am)
+{
+    if (!am)
+        return;
+    for (size_t i = 0; i < NUM; i++)
+    {
+        if(!_amteria[i])
+        {
+            std::cout << GRN << "The new Amateria is well added" << am->getType() << WHT <<std::endl;
+            _amteria[i] = am;
+            return ;
+        }
+    }
+    std::cout << RED << "The list of AMateria is complete" << WHT <<std::endl;
+    
+}
+
+AMateria* MateriaSource::createMateria(std::string const & type)
+{
+    for (size_t i = 0; i < NUM; i++)
+    {
+        if(_amteria[i] && _amteria[i]->getType() == type)
+        {
+            std::cout << GRN << "Create a new <" << type << ">" << WHT << std::endl;
+            return (_amteria[i]->clone());
+        }
+    }
+    std::cout << RED << "This type doesn't exist <" << type << ">" << WHT << std::endl;
+   return 0;
 }
 
 /********************************************************************/

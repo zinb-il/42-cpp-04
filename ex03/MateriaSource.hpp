@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 22:18:50 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/12 23:11:59 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/22 14:06:33 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class MateriaSource : public IMateriaSource
         MateriaSource(MateriaSource const &ob);
         MateriaSource & operator=(MateriaSource const &ob);
             
-        virtual void learnMateria(AMateria*);
+        virtual void learnMateria(AMateria* am);
         virtual AMateria* createMateria(std::string const & type);
         AMateria *getAMateria(int in) const ;
 };

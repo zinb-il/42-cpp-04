@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 13:56:18 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/12 21:56:29 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/22 15:13:58 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ AMateria* Ice::clone() const
 }
 
 
-void AMateria::use(ICharacter& target)
+void Ice::use(ICharacter& target)
 {
     std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }

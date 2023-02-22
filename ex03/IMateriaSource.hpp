@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 13:32:08 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/12 13:33:22 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/22 14:51:57 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class IMateriaSource
 {
     public:
-        virtual ~IMateriaSource() {}
+        virtual ~IMateriaSource();
         virtual void learnMateria(AMateria*) = 0;
         virtual AMateria* createMateria(std::string const & type) = 0;
     
