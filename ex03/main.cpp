@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 18:12:42 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/22 17:13:59 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/22 21:25:13 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ int main(void) {
     test_normal();
     std::cout << RED << std::setfill('*') << std::setw(150) << WHT << std::endl;
     mon_test();
-    system("leaks animal");
+    system("leaks material");
     return 0;
 }
 

@@ -8,7 +8,7 @@ CC = c++
 
 CFLAGS = -Wall -Werror -Wextra -Wshadow -Wno-shadow -std=c++98
 
-NAME = animal
+NAME = material
 
 $(NAME) :
 		@$(CC) $(CFLAGS) -o $(NAME) $(SRCS)

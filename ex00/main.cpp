@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 18:12:42 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/10 12:18:13 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/22 21:01:50 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,32 +15,32 @@
 int main(void)
 {
     /*Animal*/
-    // Animal  a;
-    // Animal  a1("pp");
-    // Animal  a2(a);
-    // a = a1;
-    //std::cout << GRN << "---------------------------------------" << WHT << std::endl;
-    // a.makeSound();
-    //std::cout << GRN << "---------------------------------------" << WHT << std::endl;
+    Animal  a;
+    Animal  a1("pp");
+    Animal  a2(a);
+    a = a1;
+    std::cout << GRN << "---------------------------------------" << WHT << std::endl;
+    a.makeSound();
+    std::cout << GRN << "---------------------------------------" << WHT << std::endl;
     
     /*Dog*/
-    // Dog  a;
-    // Dog  a1("pp");
-    // Dog  a2(a);
-    // a = a1;
-    // std::cout << GRN << "---------------------------------------" << WHT << std::endl;
-    // a.makeSound();
-    // std::cout << GRN << "---------------------------------------" << WHT << std::endl;
+    Dog  b;
+    Dog  b1("pp");
+    Dog  b2(b1);
+    b = b1;
+    std::cout << GRN << "---------------------------------------" << WHT << std::endl;
+    b.makeSound();
+    std::cout << GRN << "---------------------------------------" << WHT << std::endl;
 
     
     /*Cat*/
-    // Cat  a;
-    // Cat  a1("pp");
-    // Cat  a2(a);
-    // a = a1;
-    // std::cout << GRN << "---------------------------------------" << WHT << std::endl;
-    // a.makeSound();
-    // std::cout << GRN << "---------------------------------------" << WHT << std::endl;
+    Cat  c;
+    Cat  c1("pp");
+    Cat  c2(c1);
+    c = c1;
+    std::cout << GRN << "---------------------------------------" << WHT << std::endl;
+    c.makeSound();
+    std::cout << GRN << "---------------------------------------" << WHT << std::endl;
 
     const Animal* meta = new Animal();
     const Animal* j = new Dog();
@@ -53,7 +53,7 @@ int main(void)
     std::cout << RED << "-------------Animal test--------------" << WHT << std::endl;
     std::cout << j->getType() << " " << std::endl;
     std::cout << i->getType() << " " << std::endl;
-    i->makeSound(); //will output the cat sound!
+    i->makeSound();
     j->makeSound();
     meta->makeSound();
     std::cout << GRN << "---------------------------------------" << WHT << std::endl << std::endl;

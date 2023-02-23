@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 18:12:42 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/12 13:17:37 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/22 21:15:52 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int main(void)
 
     y = new Dog("new Dog");
     std::cout << d << c << std::endl;
-    std::cout << y->getType() << std::endl;
+    std::cout << y->getType() << std::endl << std::endl;
 
     delete(y);
     

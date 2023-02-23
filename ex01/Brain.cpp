@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 12:41:22 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/10 18:35:57 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/22 20:51:36 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,9 +54,7 @@ Brain & Brain::operator=(Brain const &ob)
     }
     this->ideas = new std::string[NUM];
     for (size_t i = 0; i < NUM; i++)
-    {
         this->ideas[i] = (ob.getIdeas())[i];
-    }
     return (*this);
 }
 

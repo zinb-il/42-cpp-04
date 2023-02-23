@@ -31,7 +31,7 @@ WrongCat::WrongCat(std::string t):WrongAnimal(t)
     std::cout << "WrongCat Parameter constroctur called" << std::endl;
 }
 
-WrongCat::WrongCat(WrongCat const &ob)
+WrongCat::WrongCat(WrongCat const &ob):WrongAnimal(ob)
 {
     std::cout << "WrongCat Copy constroctur called" << std::endl;
     *this = ob;
